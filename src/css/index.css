@@ -1,0 +1,107 @@
+@import url('./reset-styles.css'); /* reset styles for common elements*/
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./main-page.css');
+@import url('./category-list.css');
+@import url('./shopping-list.css');
+@import url('./side-menu.css');
+@import url('./scroll-up.css');
+@import url('./modal.css');
+@import url('./loader.css');
+
+:root {
+  /* background основного тела */
+  --body-background-color: #F6F6F6;
+  /* background header и footer  */
+  --body-secondary-color: #FFFFFF;
+  /* текст категорий */
+  --text-color: rgba(17, 17, 17, 0.6);
+  /* карточка-название книги, кнопка see more, шопинглист в header, шопинглист-описание карточки, слово Shopping в шопинглист */
+  --text-secondary-color: #111111;
+  /* категории-ховер(фокус) */
+  --text-fourth-color: #4F2EE8;
+  
+  /* ul-карточек и автор */
+  /* --text-third-color: #B4AFAF;   */
+  
+  /* bookshelf-лого */
+  --logo-color: #000000;
+    /* scroll bar for aside-menu */
+  --scroll-bar: #E0E0E0;
+}
+
+:root body.dark {
+  --body-background-color: #202024; 
+  --body-secondary-color: #111111;  
+  --text-color: rgba(255, 255, 255, 0.6);  
+  --text-secondary-color: #FFFFFF;  
+  /* --text-third-color: #B4AFAF;  */
+  --text-fourth-color: #EAC645;
+  --logo-color: #F3F3F3;  
+
+  /* scroll bar for aside-menu */
+  --scroll-bar: rgba(17, 17, 17, 0.6);
+}
+
+
+li {
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  font-weight: 400;
+
+  color: var(--text-secondary-color);
+  background-color: var(--body-background-color);
+
+  transition:  0.5s;
+}
+
+/* 375px <= phone screen <= infinity */
+.container {
+  position: relative;
+  max-width: 375px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 768px <= tablet screen <= infinity */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+/* 1440px <= desktop screen <= infinity */
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.body-wrapper {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+@media screen and (max-width: 1439.8px) {
+  .body-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main-content {
+    width: 996px;
+}
+}
